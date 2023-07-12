@@ -1,4 +1,4 @@
 #!/bin/bash
-input=$(cat input.txt)
-output=$(echo $input | sed 's/A/Z/g; s/c/e/g')
-echo $output
+while read -r line; do
+    echo "${line//A/Z}" | tr 'c' 'e'
+done
